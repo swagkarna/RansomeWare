@@ -1,0 +1,237 @@
+Stack Overflow
+Products
+Search…
+Log in Sign up
+By using our site, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.
+
+Podcast: We speak with Matt Cutts about leading the United States Digital Services and the role software can play in government. Listen now.
+Home
+PUBLIC
+Stack Overflow
+Tags
+Users
+Jobs
+TEAMS
+What’s this?
+First 25 Users Free
+How to make a Tkinter window not resizable?
+Ask Question
+Asked 3 years, 7 months ago
+Active 1 year, 3 months ago
+Viewed 35k times
+
+32
+
+
+7
+I need a Python script that uses the Tkinter module to create a static (not resizable) window.
+
+I have a pretty simple Tkinter script but I don't want it to be resizable. How do I prevent a Tkinter window from being resizable? I honestly don't know what to do.
+
+This is my script:
+
+from tkinter import *
+import ctypes, os
+
+def callback():
+    active.set(False)
+    quitButton.destroy()
+    JustGo = Button(root, text=" Keep Going!", command= lambda: KeepGoing())
+    JustGo.pack()
+    JustGo.place(x=150, y=110)
+    #root.destroy()         # Uncomment this to close the window
+
+def sleep():
+    if not active.get(): return
+    root.after(1000, sleep)
+    timeLeft.set(timeLeft.get()-1)
+    timeOutLabel['text'] = "Time Left: " + str(timeLeft.get())  #Update the label
+    if timeLeft.get() == 0:                                     #sleep if timeLeft = 0
+        os.system("Powercfg -H OFF")
+        os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
+
+def KeepGoing():
+    active.set(True)
+    sleep()
+    quitButton1 = Button(root, text="do not sleep!", command=callback)
+    quitButton1.pack()
+    quitButton1.place(x=150, y=110)
+
+root = Tk()
+root.geometry("400x268")
+root.title("Alert")
+root.configure(background='light blue')
+
+timeLeft = IntVar()
+timeLeft.set(10)            # Time in seconds until shutdown
+
+active = BooleanVar()
+active.set(True)            # Something to show us that countdown is still going.
+
+label = Label(root, text="ALERT this device will go to sleep soon!",   fg="red")
+label.config(font=("Courier", 12))
+label.configure(background='light blue')
+label.pack()
+timeOutLabel = Label(root, text = 'Time left: ' + str(timeLeft.get()),     background='light blue') # Label to show how much time we have left.
+timeOutLabel.pack()
+quitButton = Button(root, text="do not sleep!", command=callback)
+quitButton.pack()
+quitButton.place(x=150, y=110)
+
+
+
+root.after(0, sleep)
+root.mainloop()
+python-3.x tkinter static
+shareimprove this question
+edited Oct 10 '18 at 13:47
+
+gary
+3,98122 gold badges2525 silver badges5353 bronze badges
+asked May 25 '16 at 20:09
+
+IDK anything
+47311 gold badge55 silver badges88 bronze badges
+The title mentions a canvas, but you don't use a Canvas widget anywhere in the code. Are you asking about making the window as a whole a fixed size? – Bryan Oakley May 25 '16 at 20:20
+yes the canvas thing was a mistake i edited the question since but didnt change the title sorry – IDK anything May 25 '16 at 20:47
+add a comment
+2 Answers
+activeoldestvotes
+
+59
+
+The resizable method on the root window takes two boolean parameters to describe whether the window is resizable in the X and Y direction. To make it completely fixed in size, set both parameters to False:
+
+root.resizable(False, False)
+shareimprove this answer
+answered May 25 '16 at 21:28
+
+Bryan Oakley
+250k2626 gold badges341341 silver badges496496 bronze badges
+thank you this helped me alot is there a way to remove the exit (x ) button and all that too? – IDK anything May 26 '16 at 16:45
+@IDKanything: search this site. That question has been asked and answered a few times. – Bryan Oakley May 26 '16 at 16:46
+add a comment
+
+2
+
+You can also use:
+
+root.resizable(0, 0)
+Because 0 means False in Python 3.
+
+shareimprove this answer
+edited May 17 '18 at 7:15
+
+sɐunıɔןɐqɐp
+2,16677 gold badges2525 silver badges3030 bronze badges
+answered May 17 '18 at 6:23
+
+Camal Muradov
+3722 bronze badges
+1
+Not a very helpful addition, 99% the same answer as the accepted answer. Also untrue. str(0).isdigit() != str(False).isdigit(). And type(0) != type(False) etc. – Junuxx Jun 22 '19 at 0:38
+0 evaluates to False – Noah Dec 16 '19 at 19:19
+add a comment
+Your Answer
+Sign up or log in
+ Sign up using Google
+ Sign up using Facebook
+ Sign up using Email and Password
+Post as a guest
+Name
+Email
+Required, but never shown
+
+Post Your Answer
+By clicking “Post Your Answer”, you agree to our terms of service, privacy policy and cookie policy
+
+Not the answer you're looking for? Browse other questions tagged python-3.x tkinter static or ask your own question.
+Blog
+This Week #StackOverflowKnows Parties With Introverts, Perfect Cookie Ratio,…
+Podcast: The Director’s Cutts
+Featured on Meta
+Update: an agreement with Monica Cellio
+2019: a year in moderation
+Linked
+0
+I am trying to have fixed frame for my GUI Application. The window should not change its size
+Related
+1146
+How can I represent an 'Enum' in Python?
+1132
+How to flush output of print function?
+252
+Install tkinter for Python
+34
+tkinter python maximize window
+4
+Python timer in math game Tkinter
+-1
+Python - function arguments not working
+1
+Python tkinter Canvas root.after() maximum recursion depth exceeded
+0
+resizable window frame in tkinter
+1
+Tkinter .geometry() isn't resizing the window
+0
+Animate the color of rectangle
+Hot Network Questions
+Why is there a maximum landing weight limit?
+Some ISPs don't charge for bandwidth used on Youtube/Netflix/Facebook. How do they monitor that?
+Do I need to tell people that my flyer is double-sided?
+Why is Iraq's decision to expel US troops non-binding?
+What to do when you're expected to respond to a mail involving several people, but you've expressed your position in person in the meantime?
+Branch and Bound Implementation
+How to say Have a Good Vacation in German?
+Will doing a chargeback on tuition hurt my chances at getting into the same university for grad school?
+Are 16 schools too many for a professor to provide recommendation letters to?
+A plausible hyperbolic link
+How to refer to siblings who are friends?
+Can social isolation kill babies?
+8080 vs. 8086 - Are 16 Bit CPUs bloaty by nature?
+Notch filter for 50Hz without delay, is it possible?
+Are there any ways to lose in a "You can't lose the game" game?
+Avoiding zeros in ArrayReshape
+Tree Shape on a Tidally Locked World
+In 2020, SHA-1 practically broken in chosen-prefix collision (CP-collision). Can double SHA-1 hashing prevent CP-collision?
+What can we do to make UX Stack Exchange badges accessible?
+Hash code of ArrayList that contains itself as element
+Why did Axial Capacitors Fall Out of Use in the Industry?
+Could the Hold Person spell be cast as part of a speech?
+How to motivate a team when you have nothing to offer but equity?
+What is this inductor symbol from a video circuit?
+ Question feed
+
+STACK OVERFLOW
+Questions
+Jobs
+Developer Jobs Directory
+Salary Calculator
+Help
+Mobile
+Disable Responsiveness
+PRODUCTS
+Teams
+Talent
+Advertising
+Enterprise
+COMPANY
+About
+Press
+Work Here
+Legal
+Privacy Policy
+Contact Us
+STACK EXCHANGE
+NETWORK
+Technology
+Life / Arts
+Culture / Recreation
+Science
+Other
+Blog
+Facebook
+Twitter
+LinkedIn
+site design / logo © 2020 Stack Exchange Inc; user contributions licensed under cc by-sa 4.0 with attribution required. rev 2020.1.8.35731
