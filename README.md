@@ -9,8 +9,8 @@ Dogma V1.0
 - 1) Encrypt Multiple files
 - 2) Get The list Of all Encrypted Files
 - 3) Delete File After Time Reamaning
-- 4) Make Encrypt_File.py as Module
-- 5) Make Chrono.py as Module
+- 4) Make Chronometre.py as Module
+- 5) Make Encryption_File.py as Module
 - 6) Reformate Main.py for handle Encrypt Module
 - 7) Reformate Main.py for handle Encrypt Chrono
 - Bonus) Encrypt All files
