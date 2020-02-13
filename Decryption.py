@@ -4,8 +4,7 @@ import pyAesCrypt
 bufferSize = 64 * 1024
 password = "12345"
 
-for root, dirs, files in os.walk("/home/golcatlman/PycharmProjects/"
-                                 "RansomeWare/Encrypted_Data/"):
+for root, dirs, files in os.walk("path"):
     for file in files:
         if file.endswith(".dogma"):  # The arg can be a tuple of suffixes to look for
 
