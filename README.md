@@ -3,12 +3,10 @@ Dogma V1.4
 
 
 <# This Ransomware musn't be used to harm/threat/hurt other person's computer.
-------------------------------------------------------------------------------
 It's purpose is only to share knowledge and awareness about Malware/Cryptography/Operating Systems/Programming.
----------------------------------------------------------------------------------------------------------------
 This ransomware made for learning and awareness about security/cryptography. #>
-----------------------------------------------------------------------------
 
+-----------------------------------------------------------------------------------------------------------------------------
 
 ![image](https://user-images.githubusercontent.com/18190054/71987708-0069b200-322f-11ea-9605-0f7c6680067c.png)
 
@@ -35,72 +33,11 @@ import pyAesCrypt
 Informations:
 -------------
 
-if you get all of the module and change the "path" line 22 and line 188 in dogma.py to ./Encrypted_Data the script is ready to use.
+- if you get all of the module and change the "path" line 22 and line 188 in dogma.py to ./Encrypted_Data the script is ready to use.
 
-I create multipe file in Encryped_Data to encrypt (.txt, .csv, .docx, .py).
+- I create multipe file in Encryped_Data to encrypt (.txt, .csv, .docx, .py).
 This folder have also 2 child folder with exact the same file for show the recursive encryption of DOGMA.
 
-Copy And Paste from test_file to Encrypted Data if you want re-encrypt all the file.
+- Copy And Paste from test_file to Encrypted Data if you want re-encrypt all the file.
                                                                                                    
 
-Folder Structure:
------------------
-
-Encrypted_Data
-|             |
-|             |
-|             `------ test_file.csv
-|             |
-|             `------ test_file.txt
-|             |
-|             `------ test_file.py
-|             |
-|             `------ test_file.docx
-|             |
-|             |
-|             `------- recursive_test
-|                                   |
-|                                   |
-|                                   `------- test_file.csv
-|                                   |
-|                                   `------ test_file.txt
-|                                   |
-|                                   `------ test_file.py
-|                                   |
-|                                   `------ test_file.docx
-|                                   |
-|                                   |
-|                                   `------- test_2_recurs
-|                                                        |
-|                                                        |
-|                                                        `------- test_file.csv
-|                                                        |
-|                                                        `------ test_file.txt
-|                                                        |
-|                                                        `------ test_file.py
-|                                                        |
-|                                                        `------ test_file.docx
-|
-|
-| Visual_Data
-|             |
-|             |
-|             `------ Warning_Logo.png
-|             |
-|             `------ Win_Logo.png	
-|             |
-|             `------ bitcoin_logo.png	
-|             |
-|             `------ red_lock_logo.png
-|
-|
-|
-|test_file    |             
-|             |
-|             `------ test_file.csv
-|             |
-|             `------ test_file.txt
-|             |
-|             `------ test_file.py
-|             |
-|             `------ test_file.docx
