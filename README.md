@@ -1,5 +1,5 @@
 # RansomeWare
-Dogma V1.4
+Dogma V1.5.2
 
 
 <# This Ransomware musn't be used to harm/threat/hurt other person's computer.
