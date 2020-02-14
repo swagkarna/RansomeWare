@@ -33,7 +33,7 @@ import pyAesCrypt
 Informations:
 -------------
 
-- if you get all of the module and change the "path" line 22 and line 188 in dogma.py to ./Encrypted_Data the script is ready to use.
+- if you get all of the module and change the "path" in dogma.py to ./Encrypted_Data the script is ready to use.
 
 - I create multipe file in Encryped_Data to encrypt (.txt, .csv, .docx, .py).
 This folder have also 2 child folder with exact the same file for show the recursive encryption of DOGMA.
