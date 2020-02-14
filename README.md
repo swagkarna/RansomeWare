@@ -8,7 +8,7 @@ This ransomware made for learning and awareness about security/cryptography. #>
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-![image](https://user-images.githubusercontent.com/18190054/71987708-0069b200-322f-11ea-9605-0f7c6680067c.png)
+![image](https://user-images.githubusercontent.com/18190054/74493103-69e57c00-4ed1-11ea-8604-b1ad804aaaef.png)
 
 Environement:
 -------------
