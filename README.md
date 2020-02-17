@@ -45,5 +45,7 @@ Informations:
 This folder have also 2 child folder with exact the same file for show the recursive encryption of DOGMA.
 
 - Copy And Paste from test_file to Encrypted Data if you want re-encrypt all the file.
+
+- [!] Warning : By default Dogma.py is configured for encrypte C:\Users\
                                                                                                    
 
