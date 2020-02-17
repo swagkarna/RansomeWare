@@ -20,14 +20,13 @@ Environement:
 
 Module:
 -----
-from tkinter import *
-from PIL import ImageTk, Image
-import tkinter as tk
-import tkinter
-import os
-import sys
-import webbrowser
-import pyAesCrypt
+- Pillow
+- import tkinter as tk
+- import tkinter
+- import os
+- import sys
+- import webbrowser
+- import pyAesCrypt
 
 Compilation:
 -----------
