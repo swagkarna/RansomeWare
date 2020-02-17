@@ -31,11 +31,9 @@ import pyAesCrypt
 
 Compilation:
 -----------
-'''
-1 - >pip install auto-py-to-exe
-2 - >auto-py-to-exe 
-3 - insert manually all visual data 
-'''
+- >pip install auto-py-to-exe
+- >auto-py-to-exe 
+- insert manually all visual data 
 
 
 Informations:
