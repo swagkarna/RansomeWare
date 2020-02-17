@@ -12,7 +12,8 @@ This ransomware made for learning and awareness about security/cryptography. #>
 
 Environement:
 -------------
-- Ubuntu 18.4
+- Ubuntu 18.4 | Tested | No compile
+- Windows 10 | Tested | Compiled
 - Pycharm
 - Python 3.6
 
