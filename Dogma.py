@@ -8,7 +8,7 @@ import webbrowser
 import pyAesCrypt
 
 # Version
-version = "1.5.2"
+version = "1.5.3"
 
 # Get dogma file
 f = open("C:\\dogma_file.txt", "w+")
